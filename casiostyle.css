@@ -1,0 +1,40 @@
+/*------------------------------------------------CSS Calculator START-----------------------------------------------------*/
+#text_area
+{
+    font-size:x-large;
+    cursor: context-menu;
+    text-align:end;
+    text-overflow: break-word;
+}
+div p
+{
+    font-size:x-large;
+}
+#del_left div p i,#clr_hover6 div p i
+{
+    font-size:x-large;
+}
+.row .mt1{
+    cursor: pointer;
+}
+#cursor
+{
+    cursor :initial;
+}
+#curs1
+{
+    cursor: pointer;
+}
+#clr_hover3
+{
+    background-color: rgba(0, 217, 255, 0.963);
+}
+#clr_hover6
+{
+    background-color: rgb(255, 20,146);
+}
+#del_left
+{
+    background-color: rgb(255, 20,146);
+}
+/*------------------------------------------------CSS Calculator END-----------------------------------------------------*/
