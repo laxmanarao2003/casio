@@ -2,17 +2,17 @@
 <html>
     <head>
         <title>
-            Searchcasio
+            SearchCasio
         </title>
             <meta name="charset" content="UTF-8">
             <meta name="author" content="Laxmana Rao">
             <meta name="description" content="Calculator">
-            <meta name="viewport" content="initial-scale=1,width=device-width">
+            <meta name="viewport" content="initial-scale-1,width=device-width">
             <meta http-equiv="refresh" content="">
         <!------------------------External JAVA SCRIPT -------------------------->  
-        <script src=".\casioscript.js"></script>
+        <script src="casioscript.js"></script>
         <!-------------------------External CSS ---------------------------------->
-        <link rel="stylesheet" href=".\casiostyle.css" type="text/css">
+        <link rel="stylesheet" href="casiostyle.css" type="text/css">
         <!------------------------------- JQUERY-JS-CDN -------------------------->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!----------------------------- Fontawesome-JS-CDN -------------------------->
@@ -24,16 +24,12 @@
         <!------------------------ BOOTSTRAP-JQuery-CDN -------------------------->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <!----------------------------- FAVICON --------------------------------->
-        <link rel="icon" href=".\images\casio.png">
+        <link rel="icon" href="casio.png" type="image/x-icon">
         <script>
         /*------------------------------------------JQUERY Calculator Start----------------------------------------------*/
         /*------------------------------------------JQUERY Calculator Start----------------------------------------------*/
             $(document).ready(function()
             {
-                $("#github").hover(function()
-                {
-                    $(this).tooltip();
-                });
                 $("#tele").hover(function()
                 {
                     $("#tele").tooltip();
@@ -75,60 +71,63 @@
             <div class="offcanvas-body">
                 <h6 class="px-2 pb-3" onclick="window.print()" id="curs1"><i class="fa-solid fa-print pe-2"></i>Print</h6>
                 <p class="h6 px-2 pb-3"><a style="text-decoration:none;color:black;font-size:95%;font-weight:500" href="https://www.instagram.com/laxmanarao_arasavilli/" target="_blank" id="curs1"><i class="fa-solid fa-bolt pe-2"></i>Follow-Us</a></p>
-                <p class="h6 px-2 pb-3"><a style="text-decoration:none;color:black;font-size:95%;font-weight:500" href=".\casio_code.pdf" download="html_pdf" target="_blank" id="curs1"><i class="fa-solid fa-download pe-2"></i>Download</a></p>
+                <p class="h6 px-2 pb-3"><a style="text-decoration:none;color:black;font-size:95%;font-weight:500" href="D:\Html\casio_code.pdf" download="html_pdf" target="_blank" id="curs1"><i class="fa-solid fa-download pe-2"></i>Download</a></p>
+                <h6 class="px-2" onclick="" id="curs1"><i class="fa-solid fa-gear pe-2"></i>Settings</h6>
             </div>
         </div>
-<div class="container-lg container-md mt-2">
+<div class="container-md container-fluid-sm mt-2">
     <button class="btn btn-primary float-start me-3" data-bs-toggle="offcanvas" data-bs-target="#offcan" data-bs-placement="right" id="tooltip1" title="Home" data-bs-placement="right" onclick="tooltip1()"><i class="fa-solid fa-bars" data-bs-placement="right"></i></button>
     <ul class="nav nav-tabs">
         <li class="nav-item" ><a href="#calci_content" class="nav-link active" data-bs-toggle="tab" title="Calculator" data-bs-placement="bottom" id="calci1">Calculator</a></li>
         <li class="nav-item" ><a href="#exchange_rate" class="nav-link" data-bs-toggle="tab" title="Exchange currency" data-bs-placement="bottom" id="calci2">Exchange Rate</a></li>
     </ul>
     <h6 class="text-center pt-4" id="content"></h6>
-    <div class="tab-content mt-5 justify-content-center">
+    <div class="tab-content mt-3 d-flex justify-content-center">
         <!------------------------------------------------ Calculator ----------------------------------------------------->
         <!------------------------------------------------ Calculator ----------------------------------------------------->
-        <div class="container-lg tab-pane active border border-info border-3 rounded-start rounded-end mt-3 w-100 " id="calci_content">
-            <div class="mx-2 my-2">
-                <div class="row bg-light mb-3" id="cursor">
-                    <input type="text-area" class="col border border-success rounded-start rounded-end border-1 pt-5 pb-3" id="text_area" value="" placeholder="0" col="10" rows="3">
-                </div>
-                <hr>
-                <div class="row mt-1">
-                    <div class="col text-light bg-success text-center btn btn-outline-info clr_hvr1" onclick="ac()" id="clr_hover1"><p id="ac">AC</p></div>
-                    <div class="col text-light text-center btn btn-outline-info " onclick="delete_val()" id="del_left"><p><i class="fa-solid fa-delete-left"></i></p></div>
-                    <div class="col text-danger text-center btn btn-outline-info " onclick="disp('%')" id="clr_hover1"><p>%</p></div>
-                    <div class="col text-danger text-center btn btn-outline-info " onclick="disp('/')" id="clr_hover1"><p>/</p></div>
-                </div>
-                <div class="row mt-1">
-                    <div class="col-3 text-dark btn btn-outline-info " onclick="disp('7')" id="clr_hover2"><p>7</p></div>
-                    <div class="col-3 text-dark btn btn-outline-info  " onclick="disp('8')" id="clr_hover2"><p>8</p></div>
-                    <div class="col-3 text-dark btn btn-outline-info  " onclick="disp('9')" id="clr_hover2"><p>9</p></div>
-                    <div class="col-3 text-danger btn btn-outline-info " onclick="disp('*')" id="clr_hover1"><p>*</p></div>
-                </div>
-                <div class="row mt-1">
-                    <div class="col-3 text-dark btn btn-outline-info " onclick="disp('4')" id="clr_hover2"><p>4</p></div>
-                    <div class="col-3 text-dark btn btn-outline-info   " onclick="disp('5')"id="clr_hover2"><p>5</p></div>
-                    <div class="col-3 text-dark btn btn-outline-info  "onclick="disp('6')" id="clr_hover2"><p>6</p></div>
-                    <div class="col-3 text-danger btn btn-outline-info  "onclick="disp('-')" id="clr_hover1"><p>-</p></div>
-                </div>
-                <div class="row mt-1">
-                    <div class="col-3  text-dark btn btn-outline-info  "onclick="disp('1')" id="clr_hover2"><p>1</p></div>
-                    <div class="col-3 text-dark btn btn-outline-info  "onclick="disp('2')" id="clr_hover2"><p>2</p></div>
-                    <div class="col-3 text-dark btn btn-outline-info "onclick="disp('3')" id="clr_hover2"><p>3</p></div>
-                    <div class="col-3 text-danger btn btn-outline-info  "onclick="disp('+')" id="clr_hover1"><p>+</p></div>
-                </div>
-                <div class="row mt-1">
-                    <div class="col-6 text-dark btn btn-outline-info  "onclick="disp('0')" id="clr_hover2"><p>0</p></div>
-                    <div class="col-3 text-dark btn btn-outline-info "onclick="disp('.')" id="clr_hover2"><p>.</p></div>
-                    <div class="col-3 text-danger btn btn-outline-info"onclick="equalto()" id="clr_hover3"><p>=</p></div>
+        <div class="col-lg-6 tab-pane active" id="calci_content">
+            <div class="container-lg  border border-info border-3 rounded-start rounded-end mt-3 w-100 col-lg-4">
+                <div class="mx-2 my-2">
+                    <div class="row bg-light mb-3" id="cursor">
+                        <input type="text-area" class="col border border-success rounded-start rounded-end border-1 pt-5 pb-3" id="text_area" value="" placeholder="0" col="10" rows="3">
+                    </div>
+                    <hr>
+                    <div class="row mt-1">
+                        <div class="col text-light bg-success text-center btn btn-outline-info clr_hvr1" onclick="ac()" id="clr_hover1"><p id="ac">AC</p></div>
+                        <div class="col text-light text-center btn btn-outline-info " onclick="delete_val()" id="del_left"><p><i class="fa-solid fa-delete-left"></i></p></div>
+                        <div class="col text-danger text-center btn btn-outline-info " onclick="disp('%')" id="clr_hover1"><p>%</p></div>
+                        <div class="col text-danger text-center btn btn-outline-info " onclick="disp('/')" id="clr_hover1"><p>/</p></div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-3 text-dark btn btn-outline-info " onclick="disp('7')" id="clr_hover2"><p>7</p></div>
+                        <div class="col-3 text-dark btn btn-outline-info  " onclick="disp('8')" id="clr_hover2"><p>8</p></div>
+                        <div class="col-3 text-dark btn btn-outline-info  " onclick="disp('9')" id="clr_hover2"><p>9</p></div>
+                        <div class="col-3 text-danger btn btn-outline-info " onclick="disp('*')" id="clr_hover1"><p>*</p></div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-3 text-dark btn btn-outline-info " onclick="disp('4')" id="clr_hover2"><p>4</p></div>
+                        <div class="col-3 text-dark btn btn-outline-info   " onclick="disp('5')"id="clr_hover2"><p>5</p></div>
+                        <div class="col-3 text-dark btn btn-outline-info  "onclick="disp('6')" id="clr_hover2"><p>6</p></div>
+                        <div class="col-3 text-danger btn btn-outline-info  "onclick="disp('-')" id="clr_hover1"><p>-</p></div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-3  text-dark btn btn-outline-info  "onclick="disp('1')" id="clr_hover2"><p>1</p></div>
+                        <div class="col-3 text-dark btn btn-outline-info  "onclick="disp('2')" id="clr_hover2"><p>2</p></div>
+                        <div class="col-3 text-dark btn btn-outline-info "onclick="disp('3')" id="clr_hover2"><p>3</p></div>
+                        <div class="col-3 text-danger btn btn-outline-info  "onclick="disp('+')" id="clr_hover1"><p>+</p></div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-6 text-dark btn btn-outline-info  "onclick="disp('0')" id="clr_hover2"><p>0</p></div>
+                        <div class="col-3 text-dark btn btn-outline-info "onclick="disp('.')" id="clr_hover2"><p>.</p></div>
+                        <div class="col-3 text-danger btn btn-outline-info"onclick="equalto()" id="clr_hover3"><p>=</p></div>
+                    </div>
                 </div>
             </div>
         </div>
         <!------------------------------------------------Exchange Rate----------------------------------------------------->
         <!------------------------------------------------Exchange Rate----------------------------------------------------->
         <div class="tab-pane fade" id="exchange_rate">
-            <div class="container-lg container-md border border-info border-3 rounded-start rounded-end justify-content-center mt-3 w-100">
+            <div class="container border border-info border-3 rounded-start rounded-end justify-content-center mt-3 w-100">
                 <div class="mx-2 my-2">
                     <div class="row bg-light mb-3 " id="cursor">
                         <div class=" border border-success rounded-start rounded-end border-1 py-4">
@@ -202,7 +201,7 @@
         </div>
     </div>
 </div>
-<footer class="mb-auto">
+<footer>
     <div class="mt-5 text-center bg-dark">
         <h4 class="text-light pt-3 pb-2">Contact me: <span class="text-primary">Lucky</span></h4>
         <div>
@@ -212,8 +211,8 @@
             <a href="https://www.facebook.com/laxmanarao2003" target="_blank" class="btn btn-outline-light btn-floating me-2" title="Faceboook" id="fb" data-bs-placement="top"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://twitter.com/laxmanarao2003"class="btn btn-outline-light btn-floating me-2"target="_blank" title="Twitter" id="twitter" data-bs-placement="right"><i class="fa-brands fa-twitter-square"></i></a>
         </div>
-        <div class="bg-dark text-center pt-3 pb-4">
-            <a href=".\index.html" id="copyright" class="text-center text-light text-decoration-none"> &copy; 2022 Copyright: Lucky@SearchDeep</a>
+        <div class="bg-dark text-center pt-3 pb-4"> 
+            <a href="D:\calculator\index.html" id="copyright" class="text-center text-light text-decoration-none"> &copy; 2022 Copyright: Lucky@SearchDeep</a>
         </div>
     </div>
 </footer>
